@@ -1,0 +1,11 @@
+{
+  "name": "tiendahsn-b_nodejs",
+  "version": "1.0.0",
+  "description": "proyecto back de nodejs con TYPESCRIPT para montar servicio REST-API con Angular",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "KaiAnguloGil",
+  "license": "ISC"
+}
