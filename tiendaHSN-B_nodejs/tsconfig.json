@@ -1,0 +1,48 @@
+{
+  // Visit https://aka.ms/tsconfig to read more about this file
+  "compilerOptions": {
+    // File Layout
+    // "rootDir": "./src",
+     "outDir": "./dist", //<--- directorio raiz de ficheros JS puros compilado, a subir en produccion cuando despliegues
+
+    // Environment Settings
+    // See also https://aka.ms/tsconfig/module
+    "module": "commonjs",// valor original: "nodenext", lo cambio a commonjs para que funcione en nodejs poruqe en ficheros .package.json se especifica "type": "module"
+    "target": "es6", //valor original: "esnext", como hemos cambiado module a "commonjs", target lo pongo a "es6" para que sea compatible con nodejs
+    "esModuleInterop": true, // no esta por defecto, la habilitmos para poder importar modulos comunes de nodejs
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true, //habilitado, no estaba por defecto
+
+    "types": [],
+    // For nodejs:
+    // "lib": ["esnext"],
+    // "types": ["node"],
+    // and npm install -D @types/node
+
+    // Other Outputs
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    // Stricter Typechecking Options
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    // Style Options
+    // "noImplicitReturns": true,
+    // "noImplicitOverride": true,
+    // "noUnusedLocals": true,
+    // "noUnusedParameters": true,
+    // "noFallthroughCasesInSwitch": true,
+    // "noPropertyAccessFromIndexSignature": true,
+
+    // Recommended Options
+    "strict": true,
+    "jsx": "react-jsx",
+    "verbatimModuleSyntax": false, //opcion por defecto "true", daba error en el import del express
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true,
+  }
+}
